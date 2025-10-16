@@ -1,0 +1,106 @@
+name: Bug Report
+description: Report a problem or issue with the website
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide clear details to help us fix the problem quickly.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: What is the problem?
+      description: Clearly describe what is not working correctly
+      placeholder: "Example: Students cannot sign up for activities when the activity is full"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-area
+    attributes:
+      label: Where does the problem occur?
+      description: Select which part of the website has the issue
+      options:
+        - Activity Display/Cards
+        - Activity Registration/Sign-up
+        - Filters (category, day, time)
+        - Search Functionality
+        - Login/Authentication
+        - Page Layout/Appearance
+        - Mobile/Tablet View
+        - Data Not Displaying
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How can we reproduce the problem?
+      description: List the exact steps someone should follow to see the bug
+      placeholder: |
+        Example:
+        1. Go to the activities page
+        2. Click on "Chess Club"
+        3. Try to register with email test@mergington.edu
+        4. See error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe what you expected to happen
+      placeholder: "Example: The student should be successfully registered and see a confirmation message"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: What actually happens?
+      description: Describe what currently happens (the bug)
+      placeholder: "Example: An error appears saying 'Activity is full' even though only 8 of 12 spots are taken"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always - Every time
+        - Often - Most of the time
+        - Sometimes - Occasionally
+        - Rarely - Only once or twice
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: How serious is this problem?
+      options:
+        - Critical - Website unusable or major features broken
+        - High - Important feature not working
+        - Medium - Feature works but has issues
+        - Low - Minor cosmetic or edge case issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or error messages (optional)
+      description: Paste any error messages or describe what you see
+      placeholder: "Example: The console shows: Error 500 - Internal Server Error"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Any other relevant details about the problem
+      placeholder: "Example: This only happens on mobile phones, works fine on desktop"

@@ -1,0 +1,71 @@
+name: UI Enhancement Request
+description: Request a change or improvement to the website's appearance or user interface
+title: "[UI]: "
+labels: ["enhancement", "ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a UI enhancement! Please provide details about what you'd like to see changed or improved.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What UI issue or improvement are you requesting?
+      description: Clearly describe what you want to change about the website's appearance or interface.
+      placeholder: "Example: The website uses blue colors, but our school colors are white and lime green."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ui-area
+    attributes:
+      label: Which area of the website needs changes?
+      description: Select the part of the website that needs updating
+      options:
+        - Header/Navigation
+        - Activity Cards
+        - Filters/Sidebar
+        - Colors/Theme
+        - Buttons/Forms
+        - Modal Windows
+        - Footer
+        - Overall Layout
+        - Multiple Areas
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: What should it look like after the change?
+      description: Describe exactly what you want to see. Be specific about colors, positions, sizes, or behaviors.
+      placeholder: "Example: Change the primary color from blue to lime green (#00FF00). Update the header background to white with lime green text."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this change?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve experience
+        - High - Needed soon
+        - Urgent - Blocking other work
+    validations:
+      required: true
+
+  - type: textarea
+    id: visual-examples
+    attributes:
+      label: Visual examples or references (optional)
+      description: Provide links to similar designs, color codes, or describe visual references
+      placeholder: "Example: Use the mascot images from https://octodex.github.com/"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context or requirements
+      description: Any other details, limitations, or related information
+      placeholder: "Example: This needs to work on both desktop and mobile devices."
