@@ -1,0 +1,89 @@
+name: Feature Request
+description: Request a new feature or capability for the activities management system
+title: "[FEATURE]: "
+labels: ["enhancement", "feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide clear details so we can understand and implement your request.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What feature would you like to add?
+      description: Clearly describe the new functionality you want
+      placeholder: "Example: Add difficulty levels for activities so students can filter by beginner, intermediate, or advanced"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: What type of feature is this?
+      description: Select the category that best describes your request
+      options:
+        - New Filter Option
+        - New View/Display Mode
+        - Search Capability
+        - Data Field/Attribute
+        - User Authentication Feature
+        - Notification/Alert
+        - Export/Import Data
+        - Reporting/Analytics
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-benefit
+    attributes:
+      label: Who will benefit and how?
+      description: Explain which users (students, teachers, both) will use this and what problem it solves
+      placeholder: "Example: Students will be able to find activities that match their skill level. Teachers can better organize activities by experience requirements."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know the feature is complete?
+      description: List specific criteria that must be met for this feature to be considered done
+      placeholder: |
+        Example:
+        - Activities can have an optional difficulty field (beginner, intermediate, advanced)
+        - A new filter appears in the sidebar with 4 options: All, Beginner, Intermediate, Advanced
+        - Activities without a difficulty level are shown when "All" is selected
+        - The difficulty is not displayed on activity cards if not set
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-implementation
+    attributes:
+      label: Implementation suggestions (optional)
+      description: If you have ideas about how to build this, share them here
+      placeholder: |
+        Example: 
+        - Add a "difficulty" field to the activity database
+        - Update the frontend filters to include difficulty options
+        - Modify the filter logic to handle the new field
+
+  - type: dropdown
+    id: affects-backend
+    attributes:
+      label: Does this require changes to the database or backend?
+      options:
+        - "Yes - Database changes needed"
+        - "Yes - API changes needed"
+        - "No - Frontend only"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional context, limitations, or related features
+      description: Any other relevant information
+      placeholder: "Example: This should work together with the existing category filters."

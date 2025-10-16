@@ -1,0 +1,87 @@
+name: Content/Data Change Request
+description: Request changes to activities, text, or other content on the website
+title: "[CONTENT]: "
+labels: ["content", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to activities, text, schedules, or other content displayed on the website.
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: What type of content change do you need?
+      description: Select the category that best describes your request
+      options:
+        - Add New Activity
+        - Update Existing Activity
+        - Remove Activity
+        - Update Text/Description
+        - Update Schedule/Times
+        - Update Participant Limits
+        - Update Teacher Account
+        - Other Content Change
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: What is the current content?
+      description: If updating or removing, describe what currently exists
+      placeholder: "Example: Chess Club currently meets on Mondays and Fridays from 3:15 PM to 4:45 PM"
+
+  - type: textarea
+    id: requested-content
+    attributes:
+      label: What should the content be changed to?
+      description: Provide the exact new content or data. Be specific with names, times, descriptions, etc.
+      placeholder: |
+        Example:
+        Activity Name: Cooking Club
+        Description: Learn culinary skills and prepare delicious dishes
+        Schedule: Thursdays, 4:00 PM - 6:00 PM
+        Max Participants: 15
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: When does this need to be completed?
+      options:
+        - As soon as possible
+        - Within this week
+        - Within this month
+        - No specific deadline
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-users
+    attributes:
+      label: Who needs to know about this change?
+      description: Specify if students, specific teachers, or everyone should be aware
+      placeholder: "Example: All students should see the new activity. Email notifications are not needed."
+
+  - type: checkboxes
+    id: data-fields
+    attributes:
+      label: For activity changes, which fields need updating? (check all that apply)
+      options:
+        - label: Activity name
+        - label: Description
+        - label: Schedule/Days
+        - label: Start time
+        - label: End time
+        - label: Maximum participants
+        - label: Category (sports, arts, academic, community, technology)
+        - label: Current participant list
+
+  - type: textarea
+    id: additional-requirements
+    attributes:
+      label: Additional details or requirements
+      description: Any other important information about this content change
+      placeholder: "Example: This replaces the old Drama Club that was cancelled due to low enrollment"
